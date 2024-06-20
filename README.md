@@ -128,6 +128,43 @@
 - Hide protocols and message properties from the application
 - Supports: Classic CAN communication (CAN 2.0), CAN FD communication 
 
+** Communication Stack - LIN (LIN Master)**
+- LIN communication services are a group of modules for vehicle network communication with the communication system LIN.
+- Task: Provide a uniform interface to the LIN network. Hide protocol and message properties from the application.
+- Properties:
+   - A LIN 2.1 complaint communication stack with
+      - Schedule table manager for transmitting LIN frames and to handle requests to switch to other schedule tables
+      - Transport protocol, used for diagnostics
+      - A wakeup and sleep interface
+   - An underlying LIN driver:
+       - Implementing the LIN protocol and adaptation the specific hardware
+       -  Supporting both simple UART and complex frame based LIN hardware
+       -  
+** Communication Stack - FlexRay**
+
+- Provide a uniform interface to the FlexRay network.
+- Hide protocol and messade properties from the application
+- 2 transport protocol modules in the FlexRay stack are :
+  -FrTp: FlexRay ISO Transport Layer
+  -FrArTP: FlexRay AUTOSAR Transport Layer, provides bus compatibility to AUTOSAR R3.x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
