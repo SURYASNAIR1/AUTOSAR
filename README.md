@@ -109,12 +109,18 @@
 - Allow concurrent access of several clients to one or more SPU busses.
 - To abstract all features of a SPI microcontroller pins dedicated to chip select, those shall directly be handled by the SPIHandlerDriver. That means those pins shall not be available in DIO Driver.
 
+**Complex Drivers**
+- Is a module which implements non-standardized functionality within the basic software stack.
+- Eg: Complex sensor,actuators
+- Task: Fulfill the special functional and timing requirements for handling comple sensors and actuators
+- Properties: Implementation highly microcontroller, ECU and pplication dependent. Upper interface to SW-Cs specified and implemented according to AUTOSAR. Lower interface restricted access to standardized interfaces.
 
-
-
-
-
-
+**Communication Hardware Abstraction**
+- It abstract from the location of communication controllers and the ECU hardware layout.
+- For all communication systems a specific communication hardware abstraction is required (LIN, CAN, FlexRay)
+- Example: An ECU has a microcontroller with 2 internal CAN channels and an additional on-board ASIC with 4 CAN controlers. The CAN-ASIC is connected to the microcontroller via SPI.
+-Task: Provide equal mechanisms to access a bus channe; regardless of it's location (on chip/ on board)
+- Properties: Implementation is microcontroller independent, ECU hardware dependent and external device dependent. Upper interface is bus dependent, microcontroller and ECU hardware independent.
 
 
 
