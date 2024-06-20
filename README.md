@@ -103,3 +103,22 @@
 - Microcontroller Drivers
   Drivers for internal peripherals (eg: watchdog and general purpose timer)
   Function with direct microcontroller access (eg: Core test)
+
+**Microcontroller Abstraction Layer: SPIHandlerDriver**
+
+- Allow concurrent access of several clients to one or more SPU busses.
+- To abstract all features of a SPI microcontroller pins dedicated to chip select, those shall directly be handled by the SPIHandlerDriver. That means those pins shall not be available in DIO Driver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
