@@ -139,14 +139,14 @@
    - An underlying LIN driver:
        - Implementing the LIN protocol and adaptation the specific hardware
        -  Supporting both simple UART and complex frame based LIN hardware
-       -  
-** Communication Stack - FlexRay**
+       
+**Communication Stack - FlexRay**
 
 - Provide a uniform interface to the FlexRay network.
 - Hide protocol and messade properties from the application
 - 2 transport protocol modules in the FlexRay stack are :
-  -FrTp: FlexRay ISO Transport Layer
-  -FrArTP: FlexRay AUTOSAR Transport Layer, provides bus compatibility to AUTOSAR R3.x
+  - FrTp: FlexRay ISO Transport Layer
+  - FrArTP: FlexRay AUTOSAR Transport Layer, provides bus compatibility to AUTOSAR R3.x
 
 
 
