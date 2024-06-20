@@ -148,11 +148,14 @@
   - FrTp: FlexRay ISO Transport Layer
   - FrArTP: FlexRay AUTOSAR Transport Layer, provides bus compatibility to AUTOSAR R3.x
 
+**Communication Stack - TCP/IP**
 
+Task: Provide an uniform interface to the TCP/IP network. Hide protocol and message properties from the application.
 
+**Communication Stack - General**
 
-
-
+- IPDU multiplexing provides the possibility to add information to enable the multiplexing of I-PDUs contents but same IDs on the bus.
+- Multi I-PDU to container mapping provides the possibility to combine several I-PDUs to one larger I-PDU to be transmitted in one frame.
 
 
 
