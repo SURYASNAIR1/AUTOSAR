@@ -72,14 +72,34 @@
 - Internal devices are located inside the microcontroller. Eg: Internal EEPROM, internal CAN controller and Internal ADC
 - A driver for an internal device is called internal driver and is located in the microcontroller Abstraction layer.
 
+**Interface (Interface module)**
+- It contains functionality to abstract from modules which are architecturally placed below them. Eg; an interface module which abstracts from the hardware realization of a specific device.
+- It provides a generic API to access a specific type of device independent on the number of existing devices of that type and independent on the hardware realization of the different devices.
+- The interface does not change the content of the data.
+- The interfaces are located in the ECU Abstraction Layer.
+- Example: an interface for a CAN controller communication system provides a generica API to access CAN communication networks independent on the number of CAN controllers within an ECU and independent of the hardware realization (on chip, off chip).
 
+**Handler**
+- Control the concurrent, multiple and asynchronous access of one or multiple clients to one or more drivers.
+- It performs buffering, queuing, arbitration, multiplexing
+- The handler does not change the content of the data
+- Handler functionality is often incorporated in the driver or interface (eg: SPIHandlerDriver, ADC Driver)
 
+**Manager**
+- Offers specific services for multiple clients.
+- It is needed in all cases where pure handler functionality is not enough to abstract from multiple clients.
+- Can evaluate and change or adapt the content of the data.
+- Managers are located in service layer.
+- Example: The NVRAM manager manages the concurrent access to internal and/or external memory devices like flash and EEPROM memory. It also performs distributed and reliable data storage, data checking, provision of default values etc.
 
-
-
-
-
-
-
-
-
+# Architecture - contenet of software layers 
+**Microcontroller Abstraction Layer**
+- Communication Drivers
+  Drivers for ECU onboard (eg:SPI) and vehicle communication (eg: CAN), OSI-Layer: Part of Data link layer
+- I/O Drivers
+  Drivers for analog and digital I/O (eg:ADC, PWM, DIO)
+- Memory Drivers
+  for on-chip memory devices (internal flash, internal EEPROM) and memory mapped extenal memory devices (eg: external flash)
+- Microcontroller Drivers
+  Drivers for internal peripherals (eg: watchdog and general purpose timer)
+  Function with direct microcontroller access (eg: Core test)
