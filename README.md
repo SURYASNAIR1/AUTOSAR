@@ -121,9 +121,12 @@
 - Example: An ECU has a microcontroller with 2 internal CAN channels and an additional on-board ASIC with 4 CAN controlers. The CAN-ASIC is connected to the microcontroller via SPI.
 -Task: Provide equal mechanisms to access a bus channe; regardless of it's location (on chip/ on board)
 - Properties: Implementation is microcontroller independent, ECU hardware dependent and external device dependent. Upper interface is bus dependent, microcontroller and ECU hardware independent.
-
-
-
+  
+** Communication Stack - CAN**
+- The CAN communication services are a group of modules for vehicle network communication with the communication system CAN.
+- Provide a uniform interface to the CAN network
+- Hide protocols and message properties from the application
+- Supports: Classic CAN communication (CAN 2.0), CAN FD communication 
 
 
 
