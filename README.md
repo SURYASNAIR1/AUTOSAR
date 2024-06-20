@@ -20,3 +20,45 @@
 
 - Communication stacks: for communication services like CAN, FlexRay, Ethernet
 
+
+# Architecture - Overview of software layers
+
+**Microcontroller Abstraction Layer**
+
+- Lowest layer in the architecture
+- Task: Make higher software layers independent of microcontroller
+- Properties: Implementation is microcontroller dependent where as the upper interface are standardized and microcontroller independent
+
+**ECU Abstraction Layer**
+
+- Important layer in AUTOSAR
+- Provide abstraction to the drivers and also to the external devices
+- Control the lower layers like for microcontroller
+- Task: Make higher software layers independent of ECU hardware layout
+- Properties: Microcontroller independent and ECU harware dependent implementation, Microcontroller and ECU harware independent upper interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
