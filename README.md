@@ -2,7 +2,7 @@
 # Layer of AUTOSAR
 
 1. Application Layer : Basically this is our application 
-2. Runtine Environment : Kind of adapter in between BSW and application layer
+2. Runtine Environment(RTE) : Kind of adapter in between BSW and application layer
 3. Basic Software (BSW) : Is the software
 4. Microcontroller : Hardware 
 
@@ -163,10 +163,43 @@ Task: Provide an uniform interface to the TCP/IP network. Hide protocol and mess
 **Premium partner** : Honda, volvo, kia
 **Development partner** : Cosmic, C&S
 
+# How AUTOSAR
+**Yesterday**
 
 - High coupling between software and hardware. Software will directly use the hardware.
+  
+- Difficult to reuse SW from one ECU to another
 
-- Difficult to reuse 
+**Today**
+- No coupling between software and hardware - reducing development  time and costs
+
+- Easier to reuse SW from one ECU ro another
+
+- Enhance quality 
+
+- AUTOSAR component must be reusable
+
+- Cooperate on standards, compete on implementation --> Quote from AUTOSAR
+
+# Application Layer
+   Example: To control the speed of wiper
+   
+- Application software component: could be calculated at any ECU
+
+- Actuator software component, sensor software component: Placed in the Application software component but have specific actuator and sensor.
+
+# Runtime Environment(RTE)
+- For communication between Application and Basic software layer as well as between different application software component. 
+
+- **Virtual Funtion Bus(VFB):** communication mechanism that allows SW-components to interact. It's a virtual concept. Its used at the system design time to represent what all the s/w components shall be present in the system and how they shall interact communicate with one another. Using this the OEM can get to know how the ECUs will communicate with each other.
+
+
+
+
+
+
+
+
 
 
 
