@@ -1,4 +1,4 @@
- # AUTOSAR
+ # AUTOSAR : AUTomotive Open System ARchitecture
 # Layer of AUTOSAR
 
 1. Application Layer : Basically this is our application 
@@ -157,12 +157,16 @@ Task: Provide an uniform interface to the TCP/IP network. Hide protocol and mess
 - IPDU multiplexing provides the possibility to add information to enable the multiplexing of I-PDUs contents but same IDs on the bus.
 - Multi I-PDU to container mapping provides the possibility to combine several I-PDUs to one larger I-PDU to be transmitted in one frame.
 
+- R20-11 is the latest version of AUTOSAR
+
+**Core partner** : Bosch, ford, Daimler,BMW
+**Premium partner** : Honda, volvo, kia
+**Development partner** : Cosmic, C&S
 
 
+- High coupling between software and hardware. Software will directly use the hardware.
 
-
-
-
+- Difficult to reuse 
 
 
 
