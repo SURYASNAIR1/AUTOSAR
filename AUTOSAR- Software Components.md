@@ -30,6 +30,9 @@
 
 3. CompositionSwComponents
 
+
+# Detailed Description
+
 - ApplicationSWComponent: Examples: Performing calculation, decision making etc.
   Real Example : If we take start stop function the application sw component can decide the 
   algorithm like when to start and stop vehicle.
@@ -42,12 +45,19 @@ Example: To calculate the kilometers the vehicle travelled we need to store the 
 **NVM:** Non-Volatile Memory --> can keep the sw data even after power off and can be restored 
          during power on. 
 
+- ComplexDeviceDriverSwComponent: specialised layer. The data will transfer from application   
+  to microcontroller directlt through RTE. The BSW components will take more time sometimes 
+  for data transfer thus we make use of this component.
+  
+  Example: Activating the airbag or fuel injector can be time critical
 
+- ServiceSwComponent: To provide services to ASW from BSW
 
+- ServiceProxySwComponent: Is used if a particular service is to be used from a different ECU 
+  AUTOSAR
 
-
-
-
+- EcuAbstractionSwComponent: Part of BSW that act as an interface between MCAL and the 
+  application layer 
 
 
 
