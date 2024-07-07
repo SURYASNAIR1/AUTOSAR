@@ -71,7 +71,7 @@ Example: To switch on the headlight when it's dark we can make use of this compo
 - CompositionSwComponents: is a non functional component 
 
 
-# Example 
+# Real life Example 
 
 - We have to get the vehicle speed from the speed sensor 
 
@@ -84,10 +84,7 @@ Example: To switch on the headlight when it's dark we can make use of this compo
 - Save the maximum speed reached to NVM memory
 
 
-- First we need an external speed sensor that is connected to the ECU. Assume that the input 
-  is already available on the digital IO pin of the controller . So from the application 
-  point we first need an ECU ASWC that can read the corresponding IO pin and calculate the 
-  count information of the pulses that the speed sensor provides so we need an abstraction swc
+- First we need an external speed sensor that is connected to the ECU. Assume that the sensor input is already available on the digital IO pin of the controller . So from the application point we first need an ECU ASWC that can read the corresponding IO pin and calculate the count information of the pulses that the speed sensor provides so we need an ECU abstraction swc here to do this job. The next part of the application layer we would need to read the sensor data so we introduce a sensor actuator component here to ineract with the ECU abstraction layer and get the sensor pulses. The sensor actuator sw component further calculates the speed based on the sensor input with some calculation inside. The component can be coded to calculate the speed in different units for ex. kmph, mph that the application sw needs for further processing. Next we need ASWC to perform the core logic of requirement to cut off the engine when it crosses a particular speed. Hence we introduce our ASWC that gets the calculated speed from the sensor actuator sw component and does further processing. We need a calibration parameter this is equired from the application side to calculate speed cut off value and this must be tunable during production. For this use case we introduce a calibration parameter sw component that can provide this calibration parameter to the application swc. Complex device driver to cut off injection immediately. CDD can take the cutoff command from the application and set the IO pins of the controller so the injector is immediately cutoff. Base sw diagnostic manager to diagnostics. The application component is connected to the service sw component and in case an event happens the application component can pass on the info. to the service component. The ASWC will calculate the max. speed and passes to the NVM manager of the BS. To save the data the ECU has an external data flash IC which will be handled from the base BSW layer like the memory abstraction layer.
 
 
 
