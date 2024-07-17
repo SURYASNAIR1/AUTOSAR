@@ -9,7 +9,7 @@
 
 - Adds security to the onboard communication
 
-- Freshnessc- Adding counter or freshness period
+- Freshness- Adding counter or freshness period
 
 - Authenticity - Adding MAC or signature
 
