@@ -13,7 +13,7 @@
 
 - Authenticity - Adding MAC or signature
 
-- ECU's are sending messages using CAN protocol and is not authenticatde thus there is a 
+- ECU's are sending messages using CAN protocol and is not authenticated thus there is a 
   possibility of attacks. Thus we include SecOC to protect onboard vehicular communication.
 
 - Thus we can integrate secoc to automotive networks like CAN, Ethernet and Flexray.
