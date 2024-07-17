@@ -31,13 +31,13 @@
 # AUTOSAR Consortium
 - 5 different types of partnership
  
-- **9 Core partner** : Bosch, ford, Daimler,BMW ---> work together to define the new standards 
+- **9 Core partner** : Bosch, ford, Daimler,BMW---> work together to define the new standards 
   and supports the future car application needs
 
-- **55 Premium partner** : Honda, volvo, kia ---> making use of the standard, collaborating 
+- **55 Premium partner** : Honda, volvo, kia, Nissan ---> making use of the standard, collaborating 
   with core and development partners, to define AUTOSAR standard themselfs
  
-- **50 Development partner** : Cosmic, C&S --->  making use of the standard, collaborating 
+- **50 Development partner** : Cosmic, C&S, Nissan  --->  making use of the standard, collaborating 
   with core and development partners, to define AUTOSAR standard themselfs
   
 - **146 Associate partners** ---> making use of the standard dcuments AUTOSAR has released
